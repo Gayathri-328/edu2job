@@ -1,0 +1,555 @@
+/* * {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= LAYOUT ================= */
+.dashboard-layout {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: #f4f6ff;
+}
+
+.dark-mode {
+  background: #0f1225;
+  color: white;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #2c2ca4, #3f3fda);
+  color: white;
+  padding: 20px;
+}
+
+.sidebar-logo {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.sidebar-menu li:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.sidebar-menu li.active {
+  background: white;
+  color: #2c2ca4;
+  font-weight: 600;
+}
+
+/* ================= MAIN AREA ================= */
+.main-area {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* ================= TOP BAR ================= */
+.top-bar {
+  background: linear-gradient(90deg,#2c2ca4,#5c5cff);
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.marquee-text {
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* ================= BUTTONS ================= */
+.theme-btn,
+.logout-btn {
+  background: white;
+  color: #2c2ca4;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* ================= DASHBOARD ================= */
+.dashboard-full {
+  margin-top: 25px;
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+/* ================= CARDS ================= */
+.stat-box,
+.profile-box,
+.job-box,
+.education-card,
+.job-predictor,
+.last-prediction-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dark-mode .stat-box,
+.dark-mode .profile-box,
+.dark-mode .job-box,
+.dark-mode .education-card,
+.dark-mode .job-predictor,
+.dark-mode .last-prediction-card {
+  background: #1b1e3a;
+  color: white;
+}
+
+.stat-box h1 {
+  font-size: 48px;
+  color: #2c2ca4;
+}
+
+/* ================= LAST PREDICTIONS ================= */
+.last-prediction-section {
+  margin-top: 30px;
+}
+
+.last-prediction-card {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-left: 5px solid #2c2ca4;
+}
+
+/* ================= EDUCATION ================= */
+.education-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.education-card input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+}
+
+.dark-mode .education-card input {
+  background: #2a2d5a;
+  color: white;
+  border: 1px solid #555;
+}
+
+.save-btn {
+  background: #2c2ca4;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  width: 100%;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: #1f1fb8;
+}
+
+/* ================= SAVE BUTTON ================= */
+.save-btn {
+  background: #2c2ca4;
+  color: white;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* ================= JOB PREDICTOR ================= */
+.job-predictor {
+  margin-top: 30px;
+}
+
+.job-predictor input[type="file"] {
+  margin-bottom: 20px;
+}
+
+.job-predictor input[type="range"] {
+  width: 100%;
+}
+
+.edit-btn {
+  width: 100%;
+  margin-top: 20px;
+  background: #2c2ca4;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* ================= PREDICTION BAR ================= */
+
+.side-heading {
+  font-size: 22px;
+  color: #00aaff;
+  margin-bottom: 15px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.skill-card {
+  background: #0b1120;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.skill-card h4 {
+  margin-bottom: 10px;
+  color: #e5e7eb;
+}
+
+.skill-card label {
+  display: block;
+  margin-bottom: 8px;
+  color: #cbd5f5;
+  cursor: pointer;
+}
+
+.skill-card input {
+  margin-right: 8px;
+  accent-color: #00aaff;
+}
+
+
+
+/* ================= SCROLLBAR ================= */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+/* ===== LOGOUT BUTTON (RED) ===== */
+.logout-btn {
+  background: linear-gradient(90deg, #ff4d4d, #ff1a1a) !important;
+  color: white !important;
+  font-weight: 700;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(90deg, #ff1a1a, #cc0000) !important;
+  transform: scale(1.05);
+} */
+/* ================= ROOT LAYOUT ================= */
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+  background: #f4f6fb;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ================= DARK MODE ================= */
+.dark-mode {
+  background: #1e1e2f;
+  color: #fff;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #2b2fae, #4a4eea);
+  color: #fff;
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-logo {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar-menu li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-menu li.active {
+  background: #ffffff;
+  color: #2b2fae;
+  font-weight: bold;
+}
+
+/* ================= MAIN AREA ================= */
+.main-area {
+  flex: 1;
+  padding: 20px 30px;
+  overflow-y: auto;
+}
+
+/* ================= TOP BAR ================= */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #2b2fae, #5a5ef5);
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+}
+
+.top-bar h3 {
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.marquee-text {
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+.top-bar button {
+  background: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ================= DASHBOARD ================= */
+.dashboard-full {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ================= STATS ================= */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.stat-box,
+.profile-box,
+.job-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.stat-box h1 {
+  font-size: 36px;
+  color: #2b2fae;
+}
+
+/* ================= LAST PREDICTIONS ================= */
+.last-prediction-section {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.last-prediction-card {
+  padding: 12px 16px;
+  background: #f1f3ff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* ================= CAREER INSIGHTS ================= */
+.career-insights {
+  margin-top: 40px;
+}
+
+.career-insights h2 {
+  margin-bottom: 20px;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.chart-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= EDUCATION ================= */
+.education-grid {
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  max-width: 600px;
+}
+
+.education-grid input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.education-grid button {
+  background: #2b2fae;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= JOB PREDICTOR ================= */
+.job-predictor {
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+}
+
+.job-predictor input[type="range"] {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.job-predictor button {
+  margin-top: 20px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #2b2fae;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ================= SETTINGS ================= */
+.page-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  max-width: 500px;
+}
+
+.logout-btn {
+  background: #e53935;
+  color: #fff;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.skill-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.resume-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.insight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+
+.review-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.review-buttons button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #4f46e5;
+  color: white;
+}
+
+.review-buttons button:hover {
+  opacity: 0.85;
+}
+
+.review-result {
+  margin-top: 10px;
+  background: #f3f4f6;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.logout-btn {
+  margin-top: 20px;
+  background: #ef4444;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

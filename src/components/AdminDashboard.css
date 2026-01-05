@@ -1,0 +1,359 @@
+/* RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* REMOVE GLOBAL BACKGROUND */
+body {
+  background: none !important;
+}
+
+/* ===== LAYOUT ===== */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== SIDEBAR ===== */
+.admin-sidebar {
+  width: 240px;
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 25px 20px;
+}
+
+.sidebar-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.admin-sidebar ul {
+  list-style: none;
+}
+
+.admin-sidebar li {
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.admin-sidebar li:hover,
+.admin-sidebar .active {
+  background: #1e293b;
+}
+
+/* ===== MAIN CONTENT ===== */
+.admin-main {
+  flex: 1;
+  background: #f1f5f9;
+  padding: 40px 50px;
+}
+
+/* TITLE */
+.admin-title {
+  font-size: 30px;
+  margin-bottom: 35px;
+  color: #0f172a;
+}
+
+/* CARD */
+.admin-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 28px;
+  max-width: 520px;
+  margin-bottom: 35px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* CARD HEADINGS */
+.admin-card h3 {
+  margin-bottom: 18px;
+  color: #1e293b;
+}
+
+/* FILE INPUT */
+.admin-card input[type="file"] {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+/* BUTTONS */
+.admin-card button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.admin-card button:hover {
+  background: #1d4ed8;
+}
+
+/* RETRAIN */
+.retrain-btn {
+  background: #16a34a;
+}
+
+.retrain-btn:hover {
+  background: #15803d;
+}
+
+/* STATUS */
+.status {
+  margin-top: 15px;
+  color: #16a34a;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    display: none;
+  }
+
+  .admin-main {
+    padding: 25px;
+  }
+} */
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Remove any global background */
+body {
+  background: none !important;
+}
+
+/* ================= LAYOUT ================= */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  width: 240px;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 25px 20px;
+}
+
+.logo {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu li {
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu li:hover,
+.menu .active {
+  background: #1e293b;
+}
+
+.menu .logout {
+  margin-top: 30px;
+  background: #7f1d1d;
+}
+
+/* ================= MAIN CONTENT ================= */
+.main {
+  flex: 1;
+  background: #f1f5f9;
+  padding: 30px;
+  overflow-x: auto;
+}
+
+/* ================= TOP BAR ================= */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  padding: 20px 25px;
+  border-radius: 14px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.topbar h1 {
+  font-size: 24px;
+}
+
+.admin-badge {
+  background: #ffffff;
+  color: #2563eb;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ================= DASHBOARD CARDS ================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 14px;
+  color: white;
+}
+
+.card h3 {
+  font-size: 28px;
+}
+
+.card p {
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.blue {
+  background: #2563eb;
+}
+
+.green {
+  background: #16a34a;
+}
+
+.cyan {
+  background: #06b6d4;
+}
+
+.orange {
+  background: #f59e0b;
+}
+
+/* ================= TABLE ================= */
+.table-container {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.table-container h2 {
+  margin-bottom: 15px;
+  color: #0f172a;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #f1f5f9;
+}
+
+th {
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+  color: #334155;
+}
+
+td {
+  padding: 12px;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Email text */
+.email {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Confidence badge */
+.badge {
+  background: #dcfce7;
+  color: #166534;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .main {
+    padding: 20px;
+  }
+}
+.menu li {
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu li.active {
+  background: #1e293b;
+  font-weight: 500;
+}
+
+.placeholder {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+}
+.logout-btn {
+  margin-left: auto;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}

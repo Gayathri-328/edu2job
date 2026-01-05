@@ -1,0 +1,127 @@
+------------------- RESET -------------------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ------------------- FULL PAGE BACKGROUND ------------------- */
+body {
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f");
+
+
+
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* DARK PURPLE OVERLAY */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 12, 28, 0.95),
+    rgba(60, 30, 110, 0.9)
+  );
+  z-index: -1;
+}
+
+/* ------------------- LOGIN WRAPPER ------------------- */
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------------- GLASS LOGIN CARD ------------------- */
+.login-card {
+  width: 380px;
+  padding: 40px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+/* ------------------- LOGIN TITLE ------------------- */
+.login-card h1 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* ------------------- INPUT FIELDS ------------------- */
+.login-card input {
+  width: 100%;
+  padding: 14px;
+  margin: 14px 0;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.login-card input::placeholder {
+  color: #ddddff;
+}
+
+.login-card input:focus {
+  border-color: #7c6bff;
+  box-shadow: 0 0 0 2px rgba(124, 107, 255, 0.3);
+}
+
+/* ------------------- LOGIN BUTTON ------------------- */
+.login-card button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 14px;
+  background: linear-gradient(135deg, #7c6bff, #5f4bff);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-card button:hover {
+  background: linear-gradient(135deg, #6a58ff, #4e3cff);
+  transform: translateY(-1px);
+}
+
+/* ------------------- REGISTER LINK ------------------- */
+.login-card p {
+  margin-top: 20px;
+  color: #d6d6ff;
+  font-size: 14px;
+}
+
+.login-card a {
+  color: #a58bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-card a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 500px) {
+  .login-card {
+    width: 90%;
+  }
+}
