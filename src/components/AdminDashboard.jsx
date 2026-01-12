@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./AdminDashboard.css";
-// ================= DUMMY FEEDBACK DATA =================
+// =================  FEEDBACK DATA =================
 const dummyFeedbacks = [
   {
     name: "Anjali Sharma",
