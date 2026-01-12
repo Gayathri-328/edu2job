@@ -250,6 +250,97 @@
 
 // export default Login;
 
+// import React, { useState, useEffect } from "react";
+// import { useNavigate, Link } from "react-router-dom";
+// import axios from "axios";
+// import "./Login.css";
+
+// function Login() {
+//   const [email, setEmail] = useState("");
+//   const [password, setPassword] = useState("");
+//   const navigate = useNavigate();
+
+//   // 🔁 Auto redirect if already logged in
+//   useEffect(() => {
+//     const token = localStorage.getItem("token");
+//     const role = localStorage.getItem("role");
+
+//     if (token) {
+//       if (role === "admin") {
+//         navigate("/admin");
+//       } else {
+//         navigate("/dashboard");
+//       }
+//     }
+//   }, [navigate]);
+
+//   // 🔐 LOGIN HANDLER
+//   const handleLogin = async (e) => {
+//     e.preventDefault();
+
+//     try {
+//       const res = await axios.post(
+//         "http://localhost:5000/login",
+//         {
+//           email,
+//           password,
+//         }
+//       );
+
+//       // ✅ Save JWT & role
+//       localStorage.setItem("token", res.data.token);
+//       localStorage.setItem("role", res.data.user.role);
+
+//       alert("Login successful!");
+
+//       // ✅ Redirect by role
+//       if (res.data.user.role === "admin") {
+//         navigate("/admin");
+//       } else {
+//         navigate("/dashboard");
+//       }
+
+//     } catch (error) {
+//       alert(error.response?.data?.message || "Invalid email or password");
+//     }
+//   };
+
+//   return (
+//     <div className="login-container">
+//       <div className="login-card">
+//         <h1>Login</h1>
+
+//         <form onSubmit={handleLogin}>
+//           <input
+//             type="email"
+//             placeholder="Email"
+//             value={email}
+//             onChange={(e) => setEmail(e.target.value)}
+//             required
+//           />
+
+//           <input
+//             type="password"
+//             placeholder="Password"
+//             value={password}
+//             onChange={(e) => setPassword(e.target.value)}
+//             required
+//           />
+
+//           <button type="submit">Login</button>
+//         </form>
+
+//         <p>
+//           Don’t have an account?{" "}
+//           <Link to="/signup">Create Account</Link>
+//         </p>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Login;
+
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
@@ -279,13 +370,10 @@ function Login() {
     e.preventDefault();
 
     try {
-      const res = await axios.post(
-        "http://localhost:5000/login",
-        {
-          email,
-          password,
-        }
-      );
+      const res = await axios.post("http://localhost:5000/login", {
+        email,
+        password,
+      });
 
       // ✅ Save JWT & role
       localStorage.setItem("token", res.data.token);
@@ -293,13 +381,11 @@ function Login() {
 
       alert("Login successful!");
 
-      // ✅ Redirect by role
       if (res.data.user.role === "admin") {
         navigate("/admin");
       } else {
         navigate("/dashboard");
       }
-
     } catch (error) {
       alert(error.response?.data?.message || "Invalid email or password");
     }
@@ -331,8 +417,7 @@ function Login() {
         </form>
 
         <p>
-          Don’t have an account?{" "}
-          <Link to="/signup">Create Account</Link>
+          Don’t have an account? <Link to="/signup">Create Account</Link>
         </p>
       </div>
     </div>
@@ -341,4 +426,3 @@ function Login() {
 
 export default Login;
 
- 

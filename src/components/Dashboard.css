@@ -553,3 +553,184 @@
   border-radius: 6px;
   cursor: pointer;
 }
+/* ================= EDUCATION PAGE – FULL WIDTH ================= */
+
+.education-grid {
+  width: 100%;
+  min-height: calc(100vh - 90px); /* full height minus top bar */
+  padding: 30px 40px;
+  display: block;
+}
+
+/* Full-width card */
+.education-card {
+  width: 100%;
+  background: #ffffff;
+  padding: 45px 55px;
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+/* Title */
+.education-card h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 30px;
+}
+
+/* Inputs */
+.education-card input {
+  width: 100%;
+  padding: 15px 18px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  background: #f9fafb;
+}
+
+.education-card input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* Save Button */
+.save-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 16px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+/* ================= FORCE CENTER ACADEMIC BACKGROUND ================= */
+
+/* MAIN AREA FIX */
+.main-area {
+  width: 100%;
+}
+
+/* EDUCATION PAGE FULL CENTER */
+.education-grid {
+  width: 100%;
+  min-height: calc(100vh - 140px); /* accounts for top bar */
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 40px 20px;
+}
+
+/* EDUCATION CARD */
+.education-card {
+  width: 100%;
+  max-width: 800px;   /* PERFECT demo width */
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 22px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* TITLE */
+.education-card h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #1e293b;
+}
+
+/* INPUTS */
+.education-card input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  font-size: 15px;
+}
+
+.education-card input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+}
+
+/* SAVE BUTTON */
+.save-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.save-btn:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+/* ================= HIGHLIGHT RESUME UPLOAD ================= */
+
+/* Resume upload container */
+.job-predictor label {
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* File input highlight */
+.job-predictor input[type="file"] {
+  width: 100%;
+  padding: 16px;
+  margin-top: 8px;
+  border-radius: 14px;
+  border: 2px dashed #4f46e5;
+  background: linear-gradient(
+    135deg,
+    rgba(79, 70, 229, 0.08),
+    rgba(99, 102, 241, 0.08)
+  );
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.job-predictor input[type="file"]:hover {
+  background: rgba(79, 70, 229, 0.12);
+  border-color: #4338ca;
+}
+
+/* Focus effect */
+.job-predictor input[type="file"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.25);
+}
+
+/* Optional: upload hint text */
+.job-predictor label::after {
+  /* content: " (PDF / DOC / DOCX)"; */
+  font-size: 13px;
+  font-weight: 400;
+  color: #64748b;
+}

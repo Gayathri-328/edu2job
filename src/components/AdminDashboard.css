@@ -99,7 +99,7 @@ body {
 }
 
 .admin-card button:hover {
-  background: #1d4ed8;
+  background: #345c17;
 }
 
 /* RETRAIN */
@@ -114,7 +114,7 @@ body {
 /* STATUS */
 .status {
   margin-top: 15px;
-  color: #16a34a;
+  color: #215254;
   font-weight: 500;
 }
 
@@ -151,7 +151,7 @@ body {
 /* ================= SIDEBAR ================= */
 .sidebar {
   width: 240px;
-  background: #0f172a;
+  background: #104edf;
   color: #ffffff;
   padding: 25px 20px;
 }
@@ -356,4 +356,117 @@ td {
 
 .logout-btn:hover {
   background: #c0392b;
+}
+.upload-btn,
+.retrain-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+.upload-btn {
+  background: #4f46e5;
+}
+
+.retrain-btn {
+  background: #22c55e;
+  margin-top: auto;
+}
+
+.retrain-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+.sidebar-logout {
+  margin-top: auto;
+  background: #7f1d1d;
+  text-align: center;
+  font-weight: 500;
+}
+
+.sidebar-logout:hover {
+  background: #991b1b;
+}
+/* ================= DATASET UPLOAD SECTION ================= */
+
+/* Dataset Upload card spacing */
+.model-status-card:first-child {
+  margin-bottom: 40px;   /* ✅ SPACE between Dataset Upload & Model Controller */
+}
+
+/* Dataset Upload title */
+.model-status-card h2 {
+  margin-bottom: 12px;
+}
+
+/* File input alignment */
+.model-status-card input[type="file"] {
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+/* Upload Dataset button – full width & centered */
+.upload-btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* ================= MODEL CONTROLLER SECTION ================= */
+
+/* Extra top spacing so it doesn't stick to upload */
+.model-status-card + .model-status-card {
+  margin-top: 20px;
+}
+
+/* Retrain button spacing */
+.retrain-btn {
+  margin-top: 20px;
+}
+
+/* ================= CLEAN FULL-WIDTH LOOK ================= */
+
+/* Remove card overlap feeling */
+.model-status-card {
+  box-shadow: none;
+  border-radius: 12px;
+}
+
+/* Optional light separator look */
+.model-status-card:not(:last-child) {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 32px;
+}
+/* ================= DASHBOARD STAT CARDS – PROFESSIONAL COLORS ================= */
+
+/* Total Predictions */
+.card.blue {
+  background: linear-gradient(135deg, #195344, #2563eb);
+}
+
+/* Model Status */
+.card.green {
+  background: linear-gradient(135deg, #14532d, #16a34a);
+}
+
+/* Admin Role */
+.card.cyan {
+  background: linear-gradient(135deg, #334155, #475569);
+}
+
+/* Date */
+.card.orange {
+  background: linear-gradient(135deg, #5b21b6, #7c3aed);
+}
+
+/* Improve text readability */
+.card h3 {
+  color: #ffffff;
+}
+
+.card p {
+  color: rgba(255, 255, 255, 0.9);
 }

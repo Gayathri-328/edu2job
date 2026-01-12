@@ -422,6 +422,8 @@ const session = require("express-session");
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const User = require("./User");
+const adminModel = require("./routes/adminModel");
+
 
 // ================= APP INIT =================
 const app = express();
@@ -452,10 +454,12 @@ app.use("/api/predictions", require("./routes/prediction"));
 app.use("/api/charts", require("./routes/charts"));
 app.use("/dashboard", require("./routes/dashboard"));
 app.use("/api/admin/dataset", require("./datasets/adminDataset"));
-app.use("/api/admin/model", require("./datasets/adminModel"));
+app.use("/api/admin/model", require("./routes/adminModel"));
 // app.use("/api/admin/predictions", require("./adminPredictions"));
 // app.use("/api/admin/predictions", require("./routes/adminPredictions"));
 app.use("/api/admin/predictions", require("./adminPredictions"));
+app.use("/api/feedback", require("./routes/feedback"));
+
 
 
 

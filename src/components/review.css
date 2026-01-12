@@ -58,52 +58,246 @@
   color: green;
   font-weight: bold;
 } */
+/* ================= REVIEW SECTION ================= */
+
 .review-box {
+  margin-top: 30px;
+  padding: 30px;
   background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  max-width: 400px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
+/* Title */
 .review-box h3 {
-  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 18px;
 }
+
+/* ================= STAR RATING ================= */
 
 .stars {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.stars span {
+  font-size: 28px;
+  cursor: pointer;
+  opacity: 0.35;
+  transition: 0.3s;
+}
+
+.stars span:hover,
+.stars span.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ================= COMMENT BOX ================= */
+
+.review-box textarea {
+  width: 100%;
+  height: 100px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  resize: none;
+  background: #f9fafb;
+}
+
+.review-box textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* ================= ACTION BUTTONS ================= */
+
+.review-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 14px;
+}
+
+/* Submit Button */
+.review-actions button:first-child {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.review-actions button:first-child:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Like Button */
+.like-btn {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: none;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.like-btn:hover {
+  background: #bae6fd;
+}
+
+/* ================= SUBMITTED REVIEW ================= */
+
+.submitted-review {
+  margin-top: 22px;
+  padding: 18px;
+  background: #f1f5f9;
+  border-radius: 14px;
+}
+
+.submitted-review p {
+  font-size: 14px;
+  color: #334155;
+  margin-bottom: 6px;
+}
+/* ================= FULL PAGE REVIEW ================= */
+
+.page-box {
+  width: 100%;
+  max-width: 100%;
+  background: transparent;
+  padding: 0;
+}
+
+/* Review container now full width */
+.review-box {
+  width: 100%;
+  max-width: 100%;
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 0;
+  box-shadow: none;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Title */
+.review-box h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 25px;
+}
+
+/* ================= STAR RATING ================= */
+
+.stars {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.stars span {
   font-size: 32px;
   cursor: pointer;
-  margin-bottom: 10px;
+  opacity: 0.35;
+  transition: all 0.3s ease;
 }
 
-.star {
-  color: #ccc;
-  margin-right: 5px;
+.stars span:hover,
+.stars span.active {
+  opacity: 1;
+  transform: scale(1.15);
 }
 
-.star.active {
-  color: #f4c430;
+/* ================= COMMENT BOX ================= */
+
+.review-box textarea {
+  width: 100%;
+  height: 160px;
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  resize: none;
+  background: #f9fafb;
 }
 
-.rating-text {
-  font-weight: bold;
-  margin-bottom: 10px;
+.review-box textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
 }
 
-.review-box button {
-  background: #4f46e5;
-  color: white;
+/* ================= ACTION ROW ================= */
+
+.review-actions {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Submit Button */
+.review-actions button:first-child {
+  padding: 14px 30px;
+  border-radius: 14px;
   border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-.review-box button:hover {
-  background: #3730a3;
+.review-actions button:first-child:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
-.success-msg {
-  color: green;
-  margin-top: 10px;
+/* Like Button */
+.like-btn {
+  padding: 14px 22px;
+  border-radius: 14px;
+  border: none;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.like-btn:hover {
+  background: #bae6fd;
+}
+
+/* ================= SUBMITTED FEEDBACK ================= */
+
+.submitted-review {
+  margin-top: 35px;
+  padding: 25px 30px;
+  background: #f1f5f9;
+  border-radius: 16px;
+}
+
+.submitted-review p {
+  font-size: 15px;
+  color: #334155;
+  margin-bottom: 10px;
 }
